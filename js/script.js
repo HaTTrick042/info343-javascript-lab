@@ -8,7 +8,11 @@
 */ 
 
 function addition() {
-	// your code goes here!
+	var a1 = parseFloat(document.getElementById('additionInput1').value);
+    var a2 = parseFloat(document.getElementById('additionInput2').value);
+    sum = a1 + a2;
+
+    alert('Sum = ' + sum);
 }
 
 /* --------------------------------------------------------- */
@@ -28,7 +32,48 @@ function addition() {
 */ 
 
 function vowelCounter() {
-	// your code goes here!
+
+    var string = document.getElementById('vowelInput').value;
+    var string = string.toLowerCase();
+    var chars = string.split('');
+    var count = 0;
+    for (var i = 0; i < chars.length; i++) {
+        var current = chars[i];
+        if (current == 'a') {
+            count++;
+        }
+
+        else if (current == 'e') {
+            count++;
+        }
+
+        else if (current == 'i') {
+            count++;
+        }
+
+        else if (current == 'o') {
+            count++;
+        }
+
+        else if (current == 'u') {
+            count++;
+        }
+    }
+
+    if (count > 1) {
+        alert('The sentence has ' + count + 'vowels in it.');
+    }
+
+    else if (count == 1) {
+        alert('The sentence has one vowel in it.');
+    }
+
+    else {
+        alert('The sentence has no vowels in it.');
+    }
+
+    console.log(chars);
+
 }
 
 /* --------------------------------------------------------- */
